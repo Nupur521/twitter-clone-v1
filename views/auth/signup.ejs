@@ -1,0 +1,52 @@
+<%- include('../partials/header'); %>
+</head>
+<body>
+ <div class="container">
+   <div class="row">
+       <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+   <div class="mb-3">
+       <%if(message && message.length){%>
+        <p><%= message %></p>
+        <%}%>
+   </div>
+             
+
+            <div class="mb-3">
+            <h2>Sign Up</h2>
+            </div>
+            <form action="/register" method="POST">
+            <div class="mb-3 row">
+                <input type="text" class="form-control" name="firstname" placeholder="firstName">
+            </div>
+            <div class="mb-3 row">
+                <input type="text" class="form-control" name="lastname" placeholder="lastName">
+            </div>
+            <div class="mb-3 row">
+                <input type="text" class="form-control" name="username" placeholder="Username">
+            </div>
+            <div class="mb-3 row">
+                <input type="email" class="form-control" name="email" placeholder="email">
+            </div>
+            <div class="mb-3 row">
+                <input type="password" class="form-control" name="password" placeholder="password">
+            </div>
+            
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">SignUp</button>
+                  </div> 
+           
+            <div class="mb-3">
+                <p><a href="/login">Already have an account? Login Here</a></p>
+            </div>
+              </div>
+              </form>
+
+        </div>
+        <div class="col-lg-3"></div>
+
+   </div>
+
+
+ </div>
+<%- include('../partials/footer'); %>

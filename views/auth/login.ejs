@@ -1,0 +1,26 @@
+<%- include('../partials/header'); %>
+<link href="/styles/login.css" rel="stylesheet">   
+</head>
+<body class="text-center">  
+<main class="form-signin login__container">
+  <form action="/login" method="POST">
+    <h1 class="h3 mb-3 fw-normal">LOGIN</h1>
+
+    <div class="form-floating email__box">
+      <input type="text" class="form-control" name="username"  placeholder="Username">
+    </div>
+    <div class="form-floating password__box">
+      <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="submit">Login</button>
+    </div>    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+</main>
+<%- include('../partials/footer'); %>
